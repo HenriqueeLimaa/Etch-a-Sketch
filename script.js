@@ -1,11 +1,15 @@
-const container = document.querySelector('.container');
+const container = document.querySelector('div');
 
-    for(let k=1; k<= 256; k++){
-        const div = document.createElement('div');
-        div.style.flexShrink = "0";
-        div.style.border = "1px solid black";
-        div.style.width = "80px";
-        div.style.height = "80px";
-        container.appendChild(div);
-    }
+const maxDivHeightWidth = () => {
+    return 500 / 16;
+}
 
+
+for(let i=1;i<=256;i++){
+    const div = document.createElement('div');
+    div.style.flex = "1 0 auto";
+    div.style.flexWrap = "wrap";
+    div.style.minWidth = "31.25px";
+    div.style.minHeight = "31.25px";
+    container.appendChild(div);
+}
