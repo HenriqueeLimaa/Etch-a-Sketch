@@ -1,9 +1,11 @@
 body {
-    display: flex;
-    justify-content: center;
+    margin: 0;
 }
 
 html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 100%;
 }
@@ -15,4 +17,3 @@ html{
     height: 500px;
     background-color: aquamarine;
 }
-
