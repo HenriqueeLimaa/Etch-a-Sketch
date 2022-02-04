@@ -1,19 +1,75 @@
 body {
     margin: 0;
+    background-color: #e5e5e5;
 }
 
 html{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100%;
     width: 100%;
 }
 
-.container{
+.buttons{
+    display: flex;
+    gap: 5px;
+}
+
+#clear-button,
+#resize-button{
+    width: 120px;
+    height: 30px;
+    margin-bottom: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    background-color: #14213d;
+    color: #e5e5e5;
+    border-radius: 8px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#14213d;
+    padding: 10px;
+}
+.footer h3,a{
+    font-family:'Courier New', Courier, monospace;
+    color: #fca311;
+    text-decoration: none;
+}
+
+.git-logo{
+    width: 30px;
+    height: 30px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    background-color: #14213d;
+}
+
+.header h1{
+    color: #fca311;
+    font-family: 'Yellowtail', cursive;
+    font-weight: 400;
+    font-style: normal;
+    line-height: initial;
+}
+
+#container{
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
-    height: 500px;
-    background-color: aquamarine;
+    width: 800px;
+    height: 800px;
+    border: #14213d solid;
+    background-color: #ffffff;
+    margin-bottom: 80px;
 }
