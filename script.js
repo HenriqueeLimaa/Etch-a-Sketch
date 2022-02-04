@@ -1,7 +1,7 @@
-const container = document.querySelector('div');
+const container = document.getElementById('container');
 
 function getSquareSize(a=16){
-    return 500 / a + "px";
+    return 800 / a + "px";
 }
 
 function getLoopNumber(a=16){
@@ -28,13 +28,21 @@ container.addEventListener('mouseover', () => {
 })
 
 //clear button
-const clearButton = document.querySelector('button');
+const clearButton = document.getElementById('clear-button');
 
 function resetGrid(){
     container.textContent = "";
 }
 
 clearButton.addEventListener('click', () => {
+    resetGrid();
+   initializeGrid();
+})
+
+//Button to resize and clear the screen
+const resizeButton = document.getElementById('resize-button');
+
+resizeButton.addEventListener('click', () => {
     resetGrid();
     askPrompt = prompt("Type the proportions (for a 64x64 grid, type 64. MAX 100!)");
     initializeGrid(getLoopNumber(+askPrompt), getSquareSize(+askPrompt));
